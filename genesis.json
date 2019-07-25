@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2019-07-24T02:23:39.582357Z",
-  "chain_id": "bdchain-test",
+  "genesis_time": "2019-07-25T05:08:30.506646Z",
+  "chain_id": "mychain",
   "consensus_params": {
     "block": {
       "max_bytes": "22020096",
@@ -20,9 +20,9 @@
   "app_state": {
     "accounts": [
       {
-        "address": "faa1azr48q0dzlkmzdppkq67t9u887wn82d5f7nsqf",
+        "address": "faa1n738tqs2zkzvcrp9f4npwge6dntdez90cv0qa8",
         "coins": [
-          "150000000000000000000bdcoin-atto"
+          "150000000000000000000000bdcoin-atto"
         ],
         "sequence_number": "0",
         "account_number": "0"
@@ -114,7 +114,7 @@
       "missed_blocks": {}
     },
     "service": {
-      "privateOrg": "",
+      "privateOrg": "test",
       "params": {
         "max_request_timeout": "100",
         "complaint_retrospect": "1296000000000000",
@@ -123,15 +123,15 @@
       }
     },
     "record": {
-      "privateOrg": ""
+      "privateOrg": "test"
     },
     "guardian": {
       "profilers": [
         {
           "description": "genesis",
           "type": "Genesis",
-          "address": "faa1azr48q0dzlkmzdppkq67t9u887wn82d5f7nsqf",
-          "added_by": "faa1azr48q0dzlkmzdppkq67t9u887wn82d5f7nsqf",
+          "address": "faa1n738tqs2zkzvcrp9f4npwge6dntdez90cv0qa8",
+          "added_by": "faa1n738tqs2zkzvcrp9f4npwge6dntdez90cv0qa8",
           "role": {
             "name": "",
             "groups": null
@@ -139,23 +139,24 @@
           "auth": null
         }
       ],
-      "trustees": null,
+      "trustees": [
+      ],
       "whitelistnodes": [
         {
-          "pubkey": "70ebc5144a70ce0e3b9c9a1cce59f72a9589479a",
+          "pubkey": "7738cc6eb98165fd87f715dae21bad4b9f144380",
           "auth": null
         }
       ],
       "organizations": [
         {
-          "orgname": "org-from-genesis",
+          "orgname": "test",
           "validators": [
-            "fca13x886ylv3nl7dsw6j93e2zsfcdsks0tu03gfnv"
+            "fca1n7l96yqk5sdsathvenve8wn2t0w32xdujsrp0s"
           ],
           "members": [
             {
-              "node_id": "70ebc5144a70ce0e3b9c9a1cce59f72a9589479a",
-              "node_pk": "30818902818100c1aed3b751472ec6a69aef63600cd4aaa8771aabd15d730ab035a37bafe3b071f32d31ba068eb6c642f2f98f9c384dc735f3be938e37cf988db024750bca739a5f842cb03a53dcd69d81c26536e785c6b1a106ad88be135360b6f230e66c816f350bff8a6b7b6f5cae21d6df57ce8c1623173cbe4243ccce0d5f853bbbd9468d0203010001"
+              "node_id": "7738cc6eb98165fd87f715dae21bad4b9f144380",
+              "node_pk": "30818902818100df9e90b8bb39c8bec402153ce43305e0da6f6a604e89e5fcfc26e30e39b12e0cbb30169a0be248662a0ba59276ee18b49df7be581acc5cae3742c0a338c12d5f631a2018af7d76cc5cf5de276bf9bfbdf26d17595e69009556a5ec7f05a2bdbbaf77f25731b680c4c171143429ef90f161edbc8b8fd20fc880b9c9b218b7fe790203010001"
             }
           ]
         }
@@ -170,36 +171,41 @@
               "type": "bdchain/stake/MsgCreateValidator",
               "value": {
                 "Description": {
-                  "moniker": "node0",
+                  "moniker": "mynode",
                   "identity": "",
                   "website": "",
                   "details": "",
-                  "org": "org-from-genesis"
+                  "org": "test"
                 },
-                "validator_address": "fva1azr48q0dzlkmzdppkq67t9u887wn82d5u0elaw",
+                "validator_address": "fva1n738tqs2zkzvcrp9f4npwge6dntdez90da90qq",
                 "pubkey": {
                   "type": "tendermint/PubKeyEd25519",
-                  "value": "5y8VLVkoGGoF6nYV+PnMSQqzsbO4eFVky1f5INH1NeI="
+                  "value": "sSqZ7mcUAaw67gTaa0t/lquNU6bkYyy5tBb0UAV1vpY="
                 }
               }
             }
           ],
           "fee": {
-            "amount": null,
-            "gas": "0"
+            "amount": [
+              {
+                "denom": "",
+                "amount": "0"
+              }
+            ],
+            "gas": "200000"
           },
           "signatures": [
             {
               "pub_key": {
                 "type": "tendermint/PubKeySecp256k1",
-                "value": "AsCpluFw6Wt/IcGB0P8EvemZelQ/5zFUFgjxmkVy/yTf"
+                "value": "A44x6DO62LvDjbnhHOoHRTuqWzF6XEi4oP6iHfta7lhT"
               },
-              "signature": "dX5GwDtFWGjlfiecgtjrv13As2BPB/i09EUEejG9ZGktlnznF5h43FaJzqkyiFBH5pHIJ03san3eLjG4hA+OOw==",
+              "signature": "yls4PdO6sv4yR3bdQ9fuX9J6OY+phXaUQsIS9hvT0NUkXK9lTFjrDmGHN8DuPw26BP9ou8s7E+2VOZ+B/UQMFg==",
               "account_number": "0",
               "sequence": "0"
             }
           ],
-          "memo": "70ebc5144a70ce0e3b9c9a1cce59f72a9589479a@0.0.0.0:26656",
+          "memo": "7738cc6eb98165fd87f715dae21bad4b9f144380@172.22.192.144:26656",
           "privateOrg": "",
           "offchain": false
         }

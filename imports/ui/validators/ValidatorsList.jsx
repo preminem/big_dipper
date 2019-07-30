@@ -70,10 +70,6 @@ export default class Validators extends Component{
     render() {
         let title = <T>validators.active</T>;
         let desc = <T>validators.listOfActive</T>;
-        if (this.props.inactive){
-            title = <T>validators.inactive</T>;
-            desc = <T>validators.listOfInactive</T>;
-        }
 
         return <div id="validator-list">
             <Helmet>
@@ -84,17 +80,6 @@ export default class Validators extends Component{
                 <Col lg={3} xs={12}><h1 className="d-none d-lg-block">{title}</h1></Col>
                 <Col lg={9} xs={12} className="text-lg-right"><ChainStates /></Col>
             </Row>
-            <Nav pills className="status-switch">
-                <NavItem>
-                    <NavLink tag={Link} to="/validators" active={(this.props.match.url == "/validators")}><T>validators.navActive</T></NavLink>
-                </NavItem>
-                <NavItem>
-                    <NavLink tag={Link} to="/validators/inactive"
-                        active={(this.props.match.url.indexOf("inactive")>0)}>
-                        <T>validators.navInactive</T>
-                    </NavLink>
-                </NavItem>
-            </Nav>
             <p className="lead">{desc}</p>
             <Row className="validator-list">
                 <Col md={12}>

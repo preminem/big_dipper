@@ -148,25 +148,25 @@ Meteor.methods({
                 console.log(e);
             }
 
-            url = LCD+'/stake/validators?status=unbonding';
+            // url = LCD+'/stake/validators?status=unbonding';
 
-            try{
-                response = HTTP.get(url);
-                JSON.parse(response.content).forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
-            }
-            catch(e){
-                console.log(e);
-            }
+            // try{
+            //     response = HTTP.get(url);
+            //     JSON.parse(response.content).forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
+            // }
+            // catch(e){
+            //     console.log(e);
+            // }
 
-            url = LCD+'/stake/validators?status=unbonded';
+            // url = LCD+'/stake/validators?status=unbonded';
 
-            try{
-                response = HTTP.get(url);
-                JSON.parse(response.content).forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
-            }
-            catch(e){
-                console.log(e);
-            }
+            // try{
+            //     response = HTTP.get(url);
+            //     JSON.parse(response.content).forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
+            // }
+            // catch(e){
+            //     console.log(e);
+            // }
             let totalValidators = Object.keys(validatorSet).length;
             console.log("all validators: "+ totalValidators);
             for (let height = curr+1 ; height <= until ; height++) {
@@ -615,7 +615,7 @@ Meteor.methods({
 
                         if (height % 60 == 1){
                             console.log("===== calculate voting power distribution =====");
-                            let activeValidators = Validators.find({status:2,jailed:false},{sort:{voting_power:-1}}).fetch();
+                            let activeValidators = Validators.find({jailed:false},{sort:{voting_power:-1}}).fetch();
                             let numTopTwenty = Math.ceil(activeValidators.length*0.2);
                             let numBottomEighty = activeValidators.length - numTopTwenty;
 

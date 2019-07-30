@@ -87,7 +87,7 @@ const Fee = (props) => {
 }
 
 const isActiveValidator = (validator) => {
-    return !validator.jailed && validator.status == 2;
+    return !validator.jailed;
 }
 
 const isBetween = (value, min, max) => {
@@ -451,7 +451,7 @@ class LedgerButton extends Component {
 
     getValidatorOptions = () => {
         let activeValidators = Validators.find(
-            {"jailed": false, "status": 2},
+            {"jailed": false},
             {"sort":{"description.moniker":1}}
         );
         let redelegations = this.state.redelegations || {};

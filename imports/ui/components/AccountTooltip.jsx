@@ -47,7 +47,7 @@ export default class AccountTooltip extends Account{
             return
         let validator = this.state.validator;
         let moniker = validator.description && validator.description.moniker || validator.address;
-        let isActive = validator.status == 2 && !validator.jailed;
+        let isActive = !validator.jailed;
 
         return <UncontrolledTooltip key='tooltip' className='validator-tooltip' placement='right' flip={false} target={this.ref} autohide={false} fade={false}>
             <Card body className='validator-tooltip-card'>

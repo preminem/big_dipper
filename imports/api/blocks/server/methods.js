@@ -147,26 +147,6 @@ Meteor.methods({
             catch(e){
                 console.log(e);
             }
-
-            // url = LCD+'/stake/validators?status=unbonding';
-
-            // try{
-            //     response = HTTP.get(url);
-            //     JSON.parse(response.content).forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
-            // }
-            // catch(e){
-            //     console.log(e);
-            // }
-
-            // url = LCD+'/stake/validators?status=unbonded';
-
-            // try{
-            //     response = HTTP.get(url);
-            //     JSON.parse(response.content).forEach((validator) => validatorSet[validator.consensus_pubkey] = validator)
-            // }
-            // catch(e){
-            //     console.log(e);
-            // }
             let totalValidators = Object.keys(validatorSet).length;
             console.log("all validators: "+ totalValidators);
             for (let height = curr+1 ; height <= until ; height++) {

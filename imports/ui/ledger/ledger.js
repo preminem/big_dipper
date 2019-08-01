@@ -385,7 +385,7 @@ export class Ledger {
         const txSkeleton = Ledger.createSkeleton(txContext);
 
         const txMsg = {
-            type: 'cosmos-sdk/MsgSend',
+            type: 'bdchain/bank/Send',
             value: {
                 amount: [{
                     amount: amount.toString(),

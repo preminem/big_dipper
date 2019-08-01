@@ -7,7 +7,7 @@ const T = i18n.createComponent();
 export const MsgType = (props) => {
     switch (props.type){
     // bank
-    case "cosmos-sdk/MsgSend":
+    case "bdchain/bank/Send":
         return <Badge color="success"><T>messageTypes.send</T></Badge>
     case "cosmos-sdk/MsgMultiSend":
         return <Badge color="success"><T>messageTypes.multiSend</T></Badge>

@@ -51,7 +51,7 @@ publishComposite('transactions.validator', function(validatorAddress, delegatorA
 publishComposite('transactions.findOne', function(hash){
     return {
         find(){
-            return Transactions.find({txhash:hash})
+            return Transactions.find({hash:hash})
         },
         children: [
             {

@@ -52,10 +52,7 @@ Meteor.methods({
             chain.latestBlockHeight = status.sync_info.latest_block_height;
             chain.latestBlockTime = status.sync_info.latest_block_time;
 
-            let latestState = ChainStates.findOne({}, {sort: {height: -1}})
-            if (latestState.height >= chain.latestBlockHeight) {
-                return `no updates (getting block ${chain.latestBlockHeight} at block ${latestState.height})`
-            }
+            
 
             url = RPC+'/validators';
             response = HTTP.get(url);
@@ -127,7 +124,7 @@ Meteor.methods({
                     let msg = genesis.app_state.gentxs[i].value.msg;
                     // console.log(msg.type);
                     for (m in msg){
-                        if (msg[m].type == "cosmos-sdk/MsgCreateValidator"){
+                        if (msg[m].type == "bdchain/stake/MsgCreateValidator"){
                             console.log(msg[m].value);
                             // let command = Meteor.settings.bin.gaiadebug+" pubkey "+msg[m].value.pubkey;
                             let validator = {

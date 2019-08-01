@@ -16,7 +16,7 @@ Meteor.methods({
             let data = response.data
             if (data.code)
                 throw new Meteor.Error(data.code, JSON.parse(data.raw_log).message)
-            return response.data.txhash;
+            return response.data.hash;
         }
     },
     'transaction.execute': function(body, path) {

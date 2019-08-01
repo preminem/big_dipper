@@ -1,7 +1,7 @@
 {
     "public":{
         "chainName": "bdchain",
-        "chainId": "mychain",
+        "chainId": "bdchain-test",
         "gtm": "{Add your Google Tag Manager ID here}",
         "slashingWindow": 10000,
         "uptimeWindow": 250,
@@ -12,15 +12,15 @@
         "bech32PrefixValPub": "fvp",
         "bech32PrefixConsAddr": "fca",
         "bech32PrefixConsPub": "fcp",
-        "stakingDenom": "ATOM",
-        "mintingDenom": "uatom",
+        "stakingDenom": "bdcoin-atto",
+        "mintingDenom": "bdcoin-atto",
         "stakingFraction": 1000000,
         "gasPrice": 0.02,
         "coingeckoId": "bdchain"
     },
     "genesisFile": "https://raw.githubusercontent.com/preminem/big_dipper/master/genesis.json",
     "remote":{
-        "rpc":"http://127.0.0.1:26657",
+        "rpc":"http://bjhw-bdchain00-node01.bjhw:8001",
         "lcd":"http://127.0.0.1:1317"
     },
     "debug": {

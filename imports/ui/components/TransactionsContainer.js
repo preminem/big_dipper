@@ -29,7 +29,7 @@ export default TransactionsContainer = withTracker((props) => {
         transactionsExist,
         transferTxs: transactionsExist ? Transactions.find({
             $or: [
-                {"tx.value.msg.type":"cosmos-sdk/MsgSend"},
+                {"tx.value.msg.type":"bdchain/bank/Send"},
                 {"tx.value.msg.type":"cosmos-sdk/MsgMultiSend"}
             ]
         }).fetch() : {},

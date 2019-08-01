@@ -42,7 +42,7 @@ export default class Activites extends Component {
         let msg = this.props.msg;
         switch (msg.type){
         // bank
-        case "cosmos-sdk/MsgSend":
+        case "/bdchain/bank/Send":
             let amount = '';
             amount = msg.value.amount.map((coin) => new Coin(coin.amount).toString()).join(', ')
             return <p><Account address={msg.value.from_address} /> {(this.props.invalid)?<T>activities.failedTo</T>:''}<MsgType type={msg.type} /> <em className="text-success">{amount}</em> <T>activities.to</T> <span className="address"><Account address={msg.value.to_address} /></span><T>common.fullStop</T></p>

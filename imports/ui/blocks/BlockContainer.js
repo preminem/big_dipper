@@ -39,17 +39,17 @@ export default BlockContainer = withTracker((props) => {
         block: blockExist ? block : {},
         transferTxs: transactionsExist ? Transactions.find({
             $or: [
-                {"tx.value.msg.type":"cosmos-sdk/MsgSend"},
+                {"tx.value.msg.type":"bdchain/bank/Send"},
                 {"tx.value.msg.type":"cosmos-sdk/MsgMultiSend"}
             ]
         }).fetch() : {},
         stakingTxs: transactionsExist ? Transactions.find({
             $or: [
-                {"tx.value.msg.type":"cosmos-sdk/MsgCreateValidator"},
-                {"tx.value.msg.type":"cosmos-sdk/MsgEditValidator"},
-                {"tx.value.msg.type":"cosmos-sdk/MsgDelegate"},
-                {"tx.value.msg.type":"cosmos-sdk/MsgUndelegate"},
-                {"tx.value.msg.type":"cosmos-sdk/MsgBeginRedelegate"}
+                {"tx.value.msg.type":"bdchain/stake/MsgCreateValidator"},
+                {"tx.value.msg.type":"bdchain/stake/MsgEditValidator"},
+                {"tx.value.msg.type":"bdchain/stake/MsgDelegate"},
+                {"tx.value.msg.type":"bdchain/stake/MsgUndelegate"},
+                {"tx.value.msg.type":"bdchain/stake/MsgBeginRedelegate"}
             ]
         }).fetch() : {},
         distributionTxs: transactionsExist ? Transactions.find({
@@ -61,14 +61,14 @@ export default BlockContainer = withTracker((props) => {
         }).fetch() : {},
         governanceTxs: transactionsExist ? Transactions.find({
             $or: [
-                {"tx.value.msg.type":"cosmos-sdk/MsgSubmitProposal"},
-                {"tx.value.msg.type":"cosmos-sdk/MsgDeposit"},
-                {"tx.value.msg.type":"cosmos-sdk/MsgVote"}
+                {"tx.value.msg.type":"bdchain/gov/MsgSubmitProposal"},
+                {"tx.value.msg.type":"bdchain/gov/MsgDeposit"},
+                {"tx.value.msg.type":"bdchain/gov/MsgVote"}
             ]
         }).fetch() : {},
         slashingTxs: transactionsExist ? Transactions.find({
             $or: [
-                {"tx.value.msg.type":"cosmos-sdk/MsgUnjail"}
+                {"tx.value.msg.type":"bdchain/slashing/MsgUnjail"}
             ]
         }).fetch() : {},
         IBCTxs: transactionsExist ? Transactions.find({

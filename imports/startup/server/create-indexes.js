@@ -37,7 +37,7 @@ AverageData.rawCollection().createIndex({type:1, createdAt:-1},{unique:true});
 AverageValidatorData.rawCollection().createIndex({proposerAddress:1,createdAt:-1},{unique:true});
 // Status.rawCollection.createIndex({})
 
-Transactions.rawCollection().createIndex({txhash:1},{unique:true});
+Transactions.rawCollection().createIndex({hash:1},{unique:true});
 Transactions.rawCollection().createIndex({height:-1});
 // Transactions.rawCollection().createIndex({action:1});
 Transactions.rawCollection().createIndex({"tags.key":1});

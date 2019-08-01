@@ -61,14 +61,7 @@ export default class TransactionTabs extends Component{
                             <T>transactions.staking</T> ({numbro(this.state.stakingTxs.length).format("0,0")})
                         </NavLink>
                     </NavItem>
-                    <NavItem>
-                        <NavLink
-                            className={classnames({ active: this.state.activeTab === 'tx-distr' })}
-                            onClick={() => { this.toggle('tx-distr'); }}
-                        >
-                            <T>transactions.distribution</T> ({numbro(this.state.distributionTxs.length).format("0,0")})
-                        </NavLink>
-                    </NavItem>
+                   
                     <NavItem>
                         <NavLink
                             className={classnames({ active: this.state.activeTab === 'tx-gov' })}

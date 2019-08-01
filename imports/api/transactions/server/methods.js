@@ -15,7 +15,7 @@ Meteor.methods({
         let tx = JSON.parse(response.content);
 
         console.log(hash);
-
+        
         tx.height = parseInt(tx.height);
 
         // if (!tx.code){
@@ -66,8 +66,9 @@ Meteor.methods({
         let txId = Transactions.insert(tx);
         if (txId){
             return txId;
+        }else {
+            return false;
         }
-        else return false;
     },
     'Transactions.findDelegation': function(address, height){
         return Transactions.find({

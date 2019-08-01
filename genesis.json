@@ -1,6 +1,6 @@
 {
-  "genesis_time": "2019-07-25T05:08:30.506646Z",
-  "chain_id": "mychain",
+  "genesis_time": "2019-07-16T05:50:17.084577264Z",
+  "chain_id": "bdchain-test",
   "consensus_params": {
     "block": {
       "max_bytes": "22020096",
@@ -20,9 +20,33 @@
   "app_state": {
     "accounts": [
       {
-        "address": "faa1n738tqs2zkzvcrp9f4npwge6dntdez90cv0qa8",
+        "address": "faa1fg26xptgv7xkswz8cfx0grv53xydgrsn3f3sq7",
         "coins": [
-          "150000000000000000000000bdcoin-atto"
+          "150000000000000000000bdcoin-atto"
+        ],
+        "sequence_number": "0",
+        "account_number": "0"
+      },
+      {
+        "address": "faa1fuen7p7zh6tewf5p5rqm59z474n8we75xs7xyk",
+        "coins": [
+          "150000000000000000000bdcoin-atto"
+        ],
+        "sequence_number": "0",
+        "account_number": "0"
+      },
+      {
+        "address": "faa100cnftluee4dv32u52fnsyecdnhgj53pwc95uj",
+        "coins": [
+          "150000000000000000000bdcoin-atto"
+        ],
+        "sequence_number": "0",
+        "account_number": "0"
+      },
+      {
+        "address": "faa12lk69cwx57s36z64t50n9wgsheftwa75msy8np",
+        "coins": [
+          "150000000000000000000bdcoin-atto"
         ],
         "sequence_number": "0",
         "account_number": "0"
@@ -114,7 +138,7 @@
       "missed_blocks": {}
     },
     "service": {
-      "privateOrg": "test",
+      "privateOrg": "",
       "params": {
         "max_request_timeout": "100",
         "complaint_retrospect": "1296000000000000",
@@ -123,15 +147,15 @@
       }
     },
     "record": {
-      "privateOrg": "test"
+      "privateOrg": ""
     },
     "guardian": {
       "profilers": [
         {
           "description": "genesis",
           "type": "Genesis",
-          "address": "faa1n738tqs2zkzvcrp9f4npwge6dntdez90cv0qa8",
-          "added_by": "faa1n738tqs2zkzvcrp9f4npwge6dntdez90cv0qa8",
+          "address": "faa1fg26xptgv7xkswz8cfx0grv53xydgrsn3f3sq7",
+          "added_by": "faa1fg26xptgv7xkswz8cfx0grv53xydgrsn3f3sq7",
           "role": {
             "name": "",
             "groups": null
@@ -140,25 +164,68 @@
         }
       ],
       "trustees": [
+        {
+          "description": "genesis",
+          "type": "Genesis",
+          "address": "faa1fuen7p7zh6tewf5p5rqm59z474n8we75xs7xyk",
+          "added_by": "faa1fg26xptgv7xkswz8cfx0grv53xydgrsn3f3sq7",
+          "role": {
+            "name": "",
+            "groups": null
+          },
+          "auth": null
+        },
+        {
+          "description": "genesis",
+          "type": "Genesis",
+          "address": "faa100cnftluee4dv32u52fnsyecdnhgj53pwc95uj",
+          "added_by": "faa1fg26xptgv7xkswz8cfx0grv53xydgrsn3f3sq7",
+          "role": {
+            "name": "",
+            "groups": null
+          },
+          "auth": null
+        },
+        {
+          "description": "genesis",
+          "type": "Genesis",
+          "address": "faa12lk69cwx57s36z64t50n9wgsheftwa75msy8np",
+          "added_by": "faa1fg26xptgv7xkswz8cfx0grv53xydgrsn3f3sq7",
+          "role": {
+            "name": "",
+            "groups": null
+          },
+          "auth": null
+        }
       ],
       "whitelistnodes": [
         {
-          "pubkey": "7738cc6eb98165fd87f715dae21bad4b9f144380",
+          "pubkey": "b9bc90ff432c66eb837562151de5f2d8c08a28e4",
+          "auth": null
+        },
+        {
+          "pubkey": "0b4e3aa2b8ad534638d351a89ade64dc4e20e1bc",
+          "auth": null
+        },
+        {
+          "pubkey": "6d843345e09ed6100c1ee70f963ee62c7ea9d004",
+          "auth": null
+        },
+        {
+          "pubkey": "fe6b9c60b8e7d1b6fad61659f3708655da89aa71",
           "auth": null
         }
       ],
       "organizations": [
         {
-          "orgname": "test",
+          "orgname": "org0",
           "validators": [
-            "fca1n7l96yqk5sdsathvenve8wn2t0w32xdujsrp0s"
+            "fca1nhta6wnd4k4w35v7gskpj4qzkhf853k6edlpy5",
+            "fca1vxmgwvv5h093att6pgjfhh8v5mxjtn2g6pxxry",
+            "fca1fgsy262jly6m7vkqpkjvagyvh7ez43dkey2e9k",
+            "fca1e4m2fws2nrwzlx2scpldtsfd44tvrd0z6s3mn0"
           ],
-          "members": [
-            {
-              "node_id": "7738cc6eb98165fd87f715dae21bad4b9f144380",
-              "node_pk": "30818902818100df9e90b8bb39c8bec402153ce43305e0da6f6a604e89e5fcfc26e30e39b12e0cbb30169a0be248662a0ba59276ee18b49df7be581acc5cae3742c0a338c12d5f631a2018af7d76cc5cf5de276bf9bfbdf26d17595e69009556a5ec7f05a2bdbbaf77f25731b680c4c171143429ef90f161edbc8b8fd20fc880b9c9b218b7fe790203010001"
-            }
-          ]
+          "members": null
         }
       ]
     },
@@ -171,16 +238,16 @@
               "type": "bdchain/stake/MsgCreateValidator",
               "value": {
                 "Description": {
-                  "moniker": "mynode",
+                  "moniker": "node03",
                   "identity": "",
                   "website": "",
                   "details": "",
-                  "org": "test"
+                  "org": "org0"
                 },
-                "validator_address": "fva1n738tqs2zkzvcrp9f4npwge6dntdez90da90qq",
+                "validator_address": "fva12lk69cwx57s36z64t50n9wgsheftwa75wpwgwx",
                 "pubkey": {
                   "type": "tendermint/PubKeyEd25519",
-                  "value": "sSqZ7mcUAaw67gTaa0t/lquNU6bkYyy5tBb0UAV1vpY="
+                  "value": "dJ5E9CsFH/MnBqUco9/9cQDguz8TMNp0y+AbnCpqroI="
                 }
               }
             }
@@ -198,14 +265,155 @@
             {
               "pub_key": {
                 "type": "tendermint/PubKeySecp256k1",
-                "value": "A44x6DO62LvDjbnhHOoHRTuqWzF6XEi4oP6iHfta7lhT"
+                "value": "AgB82wiirYoLUSjSTb/C1uZoPJbNSEqeb0ql1Dy8Irr6"
               },
-              "signature": "yls4PdO6sv4yR3bdQ9fuX9J6OY+phXaUQsIS9hvT0NUkXK9lTFjrDmGHN8DuPw26BP9ou8s7E+2VOZ+B/UQMFg==",
+              "signature": "J18KcZOVlXP7rxYBiqmL7f0sJjQNeeecvNd1LMK6wVQWU1t3z29NuGqNN1COqwoHBfCtbwaEf2yj8mWjiKtweA==",
               "account_number": "0",
               "sequence": "0"
             }
           ],
-          "memo": "7738cc6eb98165fd87f715dae21bad4b9f144380@172.22.192.144:26656",
+          "memo": "fe6b9c60b8e7d1b6fad61659f3708655da89aa71@10.176.161.148:26656",
+          "privateOrg": "",
+          "offchain": false
+        }
+      },
+      {
+        "type": "bdchain/bank/StdTx",
+        "value": {
+          "msg": [
+            {
+              "type": "bdchain/stake/MsgCreateValidator",
+              "value": {
+                "Description": {
+                  "moniker": "node0",
+                  "identity": "",
+                  "website": "",
+                  "details": "",
+                  "org": "org0"
+                },
+                "validator_address": "fva1fg26xptgv7xkswz8cfx0grv53xydgrsnycmlae",
+                "pubkey": {
+                  "type": "tendermint/PubKeyEd25519",
+                  "value": "rda8e2qs6DAvWFkkLJwNjuoUji+N7bYiuqCNy9gQDNo="
+                }
+              }
+            }
+          ],
+          "fee": {
+            "amount": [
+              {
+                "denom": "",
+                "amount": "0"
+              }
+            ],
+            "gas": "200000"
+          },
+          "signatures": [
+            {
+              "pub_key": {
+                "type": "tendermint/PubKeySecp256k1",
+                "value": "AlwI4sqiB5wnODZHnA8sR/40GVSRFEw12PwwJjOH4lW1"
+              },
+              "signature": "qBoyqS3SRWbBrix6qyGvxDiXgBpZ3XUH7TkoXsgLHW13Vtjaufm/S1YxoiJJG9EPl/PxzUV+GiRTSd9sDgrZAQ==",
+              "account_number": "0",
+              "sequence": "0"
+            }
+          ],
+          "memo": "b9bc90ff432c66eb837562151de5f2d8c08a28e4@10.227.48.143:26656",
+          "privateOrg": "",
+          "offchain": false
+        }
+      },
+      {
+        "type": "bdchain/bank/StdTx",
+        "value": {
+          "msg": [
+            {
+              "type": "bdchain/stake/MsgCreateValidator",
+              "value": {
+                "Description": {
+                  "moniker": "node1",
+                  "identity": "",
+                  "website": "",
+                  "details": "",
+                  "org": "org0"
+                },
+                "validator_address": "fva1fuen7p7zh6tewf5p5rqm59z474n8we75np5fe3",
+                "pubkey": {
+                  "type": "tendermint/PubKeyEd25519",
+                  "value": "7VHTUUf3lxxyrUtyHbz11hNXS431E/rP+PVUcBeKhZE="
+                }
+              }
+            }
+          ],
+          "fee": {
+            "amount": [
+              {
+                "denom": "",
+                "amount": "0"
+              }
+            ],
+            "gas": "200000"
+          },
+          "signatures": [
+            {
+              "pub_key": {
+                "type": "tendermint/PubKeySecp256k1",
+                "value": "Am0ZQJsrInJuBGLo4Pko25qKKxathcPnpSj8uyWKpECT"
+              },
+              "signature": "4WtznCoB6zd5rVjrF7aVsWIUP2+Jk4SIj4Rlqx8aIScn2wuJFru881Z/dhz76mn2awkd0ym8L7kLLwWN1nGw4w==",
+              "account_number": "0",
+              "sequence": "0"
+            }
+          ],
+          "memo": "0b4e3aa2b8ad534638d351a89ade64dc4e20e1bc@10.227.48.144:26656",
+          "privateOrg": "",
+          "offchain": false
+        }
+      },
+      {
+        "type": "bdchain/bank/StdTx",
+        "value": {
+          "msg": [
+            {
+              "type": "bdchain/stake/MsgCreateValidator",
+              "value": {
+                "Description": {
+                  "moniker": "node02",
+                  "identity": "",
+                  "website": "",
+                  "details": "",
+                  "org": "org0"
+                },
+                "validator_address": "fva100cnftluee4dv32u52fnsyecdnhgj53pmf0mp4",
+                "pubkey": {
+                  "type": "tendermint/PubKeyEd25519",
+                  "value": "LRQ933hjxIi6S7PWN37JeJ1O4EKmm2NNA0fw8/DFgts="
+                }
+              }
+            }
+          ],
+          "fee": {
+            "amount": [
+              {
+                "denom": "",
+                "amount": "0"
+              }
+            ],
+            "gas": "200000"
+          },
+          "signatures": [
+            {
+              "pub_key": {
+                "type": "tendermint/PubKeySecp256k1",
+                "value": "A8hiUcENV4mTnz+1c5/ZldDpMRswgXaJCIndX40t4TIJ"
+              },
+              "signature": "pR4UHSS0H9ekRW81w9HnyIY0XWlIF+44vUIDrtaydqxVvWndMUkwjaKElu+Hxhcfw+X3qx6h84V4jTQshje6OQ==",
+              "account_number": "0",
+              "sequence": "0"
+            }
+          ],
+          "memo": "6d843345e09ed6100c1ee70f963ee62c7ea9d004@10.176.161.147:26656",
           "privateOrg": "",
           "offchain": false
         }

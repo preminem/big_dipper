@@ -31,8 +31,8 @@ export default class Transaction extends Component{
                 let tx = this.props.transaction;
                 return <Container id="transaction">
                     <Helmet>
-                        <title>Transaction {tx.txhash} on Cosmos Hub | The Big Dipper</title>
-                        <meta name="description" content={"Details of transaction "+tx.txhash} />
+                        <title>Transaction {tx.hash} on Cosmos Hub | The Big Dipper</title>
+                        <meta name="description" content={"Details of transaction "+tx.hash} />
                     </Helmet>
                     <h4><T>transactions.transaction</T> {(!tx.code)?<TxIcon valid />:<TxIcon />}</h4>
                     {(tx.code)?<Row><Col xs={{size:12, order:"last"}} className="error">
@@ -50,7 +50,7 @@ export default class Transaction extends Component{
                         <CardBody>
                             <Row>
                                 <Col md={4} className="label"><T>common.hash</T></Col>
-                                <Col md={8} className="value text-nowrap address">{tx.txhash}</Col>
+                                <Col md={8} className="value text-nowrap address">{tx.hash}</Col>
                                 <Col md={4} className="label"><T>common.height</T></Col>
                                 <Col md={8} className="value">
                                     <Link to={"/blocks/"+tx.height}>{numbro(tx.height).format("0,0")}</Link>

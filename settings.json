@@ -1,0 +1,46 @@
+{
+    "public":{
+        "chainName": "BDChain Testnet",
+        "chainId": "bdchain-test",
+        "gtm": "{Add your Google Tag Manager ID here}",
+        "slashingWindow": 10000,
+        "uptimeWindow": 250,
+        "initialPageSize": 30,
+        "bech32PrefixAccAddr": "faa",
+        "bech32PrefixAccPub": "fap",
+        "bech32PrefixValAddr": "fva",
+        "bech32PrefixValPub": "fvp",
+        "bech32PrefixConsAddr": "fca",
+        "bech32PrefixConsPub": "fcp",
+        "stakingDenom": "bdcoin",
+        "mintingDenom": "bdcoin-atto",
+        "stakingFraction": 1000000,
+        "gasPrice": 0.02,
+        "coingeckoId": "bdchain"
+    },
+    "genesisFile": "https://raw.githubusercontent.com/wukongcheng/big_dipper/master/genesis.json",
+    "remote":{
+        "rpc":"http://bjhw-bdchain00-node01.bjhw:8001",
+        "lcd":"http://127.0.0.1:1317"
+    },
+    "debug": {
+        "startTimer": true,
+        "readGenesis": true
+    },
+    "bin":{
+        "gaiadebug": "/path/to/gaiadebug"
+    },
+    "params":{
+        "startHeight": 0,
+        "defaultBlockTime": 5000,
+        "blockInterval": 15000,
+        "consensusInterval": 1000,
+        "statusInterval":7500,
+        "signingInfoInterval": 1800000,
+        "proposalInterval": 5000,
+        "missedBlocksInterval": 60000,
+        "delegationInterval": 900000
+    }
+}
+
+

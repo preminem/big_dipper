@@ -21,7 +21,11 @@
     "genesisFile": "https://raw.githubusercontent.com/preminem/big_dipper/master/genesis.json",
     "remote":{
         "rpc":"http://bjhw-bdchain00-node01.bjhw:8001",
+<<<<<<< HEAD
         "lcd":"http://127.0.0.1:1317"
+=======
+        "lcd":"http://bjhw-bdchain00-node01.bjhw:1317"
+>>>>>>> 879f9e91bc23eaee10bd420a00c8edce96ef3f65
     },
     "debug": {
         "startTimer": true,
